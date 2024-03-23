@@ -1,0 +1,282 @@
+/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --color-primary: rgb(255, 113, 113);
+  --color-secondary: linear-gradient(270deg, #ffd1d2 0%, #ebe49f 100%);
+  --color-white: #ffffff;
+  --font-family: "Poppins";
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Header Styles */
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  word-spacing: 10px;
+  background-color: var(--color-primary);
+  height: 50px;
+  padding: 0 20px;
+}
+
+.header-list-item {
+  font-size: 1.25rem;
+  font-weight: bold;
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.list-item-md {
+  display: none;
+}
+.list-item {
+  padding: 0 10px;
+  flex-wrap: nowrap;
+}
+
+/* Page 1 Styles */
+.container-page1,
+.container-page2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: var(--color-secondary);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page1-col-1 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 50px;
+  margin: 20px 0;
+}
+
+.page1-col-1 p {
+  margin: 10px 0;
+  padding: 20px 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.content-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.page1-col-2 {
+  flex-basis: 50%;
+  height: 93vh;
+}
+.page1-col-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-img-container {
+  flex-basis: 50%;
+  height: 93vh;
+}
+
+/* Page 2 Styles */
+.container-page2 {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 150px 100px;
+}
+
+.gallery-container {
+  flex-basis: 40%;
+  display: flex;
+  height: 380px;
+  align-items: center;
+  gap: 30px;
+}
+
+.gallery-subcontainer {
+  flex-basis: 49%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* gap: 10px; */
+}
+.img1-container,
+.img2-container {
+  width: 100%;
+  overflow: hidden;
+  flex-basis: 49%;
+}
+
+.img1,
+.img2 {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  bottom: 90px;
+}
+
+.img3-container {
+  flex-basis: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img3 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-col-2 {
+  flex-basis: 50%;
+  max-width: 60%;
+  padding: 20px;
+  background: var(--color-primary);
+  margin-top: 20px;
+  text-align: start;
+}
+
+.card-col-2 h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card-col-2 span {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.card-col-2 img {
+  margin: 5px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
+  #header {
+   display: flex; 
+   justify-content: end;
+    height: auto;
+  }
+
+  .header-list-item {
+    display: none;
+  }
+
+  .list-item-md{
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .list-item {
+    padding: 10px 0;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .page1-col-1,
+  .page1-col-2 {
+    flex-basis: 100%;
+    padding: 0 10px;
+  }
+  .page1-col-1 p {
+    text-align: left;
+  }
+  .content-title {
+    text-align: left;
+  }
+  .btn {
+    margin-top: 0;
+  }
+  .page2-row {
+    flex-direction: column;
+  }
+  .container-page2{
+    display: grid;
+    flex-direction: row;
+  }
+  .col-1 {
+    flex-direction: column;
+  }
+  .card-col-2{
+ 
+      flex-basis: 50%;
+      max-width: 100%;
+      padding: 20px;
+      background: var(--color-primary);
+      margin-top: 20px;
+      text-align: start;
+    
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+  .page1-col-1 {
+    flex-basis: 50%;
+  }
+  .page1-col-2 {
+    flex-basis: 50%;
+  }
+  .page1-col-1 p {
+    text-align: left;
+  }
+  .content-title {
+    text-align: left;
+  }
+  .btn {
+    margin-top: 0;
+  }
+  .gallery-container {
+    flex-direction: row;
+  }
+  .col-1 {
+    flex-direction: column;
+  }
+}
