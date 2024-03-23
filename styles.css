@@ -189,16 +189,16 @@ body {
   justify-content: start;
   align-items: center;
 }
-
-.card-col-2 img {
-  margin: 5px;
+.click-btn {
+  display: flex;
+  gap: 10px;
 }
 
 /* Media Queries */
 @media screen and (max-width: 767px) {
   #header {
-   display: flex; 
-   justify-content: end;
+    display: flex;
+    justify-content: end;
     height: auto;
   }
 
@@ -206,7 +206,7 @@ body {
     display: none;
   }
 
-  .list-item-md{
+  .list-item-md {
     display: flex;
     align-items: flex-end;
   }
@@ -222,10 +222,12 @@ body {
     flex-basis: 100%;
     padding: 0 10px;
   }
+
   .page1-col-1 p {
     text-align: left;
   }
   .content-title {
+    padding-bottom: 0px;
     text-align: left;
   }
   .btn {
@@ -234,23 +236,30 @@ body {
   .page2-row {
     flex-direction: column;
   }
-  .container-page2{
+  .container-page2 {
     display: grid;
     flex-direction: row;
   }
   .col-1 {
     flex-direction: column;
   }
-  .card-col-2{
- 
-      flex-basis: 50%;
-      max-width: 100%;
-      padding: 20px;
-      background: var(--color-primary);
-      margin-top: 20px;
-      text-align: start;
-    
-
+  .card-col-2 {
+    flex-basis: 50%;
+    max-width: 100%;
+    padding: 20px;
+    background: var(--color-primary);
+    margin-top: 20px;
+    text-align: start;
+  }
+  .gallery-container {
+    flex-direction: column;
+  }
+  .img3-container {
+    display: none;
+  }
+  .card-col-2 h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 }
 
