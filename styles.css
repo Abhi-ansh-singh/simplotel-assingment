@@ -261,6 +261,9 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
   }
+  .container-page2{
+    padding: 75px 50px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -288,4 +291,5 @@ body {
   .col-1 {
     flex-direction: column;
   }
+ 
 }
